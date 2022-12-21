@@ -1,0 +1,81 @@
+<meta charset="UTF-8">
+<h1>JUEGO DE ADIVINACIÓN DE UN NÚMERO</h1>
+
+<script>
+    function saltarLinea() {
+        document.write("<br>"); 
+        document.write("<br>"); 
+        document.write("<br>"); 
+    }
+
+    function imprimir(frase) {
+        document.write(frase);
+        saltarLinea();
+    }
+    
+
+    var numeropensadomáquina = Math.round(Math.random()*10); 
+    //var numerousuario = parseInt(prompt("Ingrese un numero entre el  0 - 10"));
+    var intentos = 3
+    var contador = 1
+    alert(" Adivina un número pensado por la computadora del 0 al 10");
+    alert(" Solo tienes tres intentos");
+    alert(" Iniciará el juego de adivinación de un número en... 3, 2, 1");
+    alert("! A jugar!");
+
+    while(contador <= intentos) {
+
+        var numerousuario = parseInt(prompt("Ingrese un numero entre el  0 - 10 "));
+
+        if (numeropensadomáquina == numerousuario){   
+
+           alert(" Felicidades!! usted acertó en el intento " + intentos + " , el número correcto es : "+ numeropensadomáquina);
+           break;
+
+        } 
+
+        else { 
+
+        	alert("Lo siento, usted no acertó");
+        }
+       
+        contador++;
+
+    }           
+
+        if (numeropensadomáquina == numerousuario){
+
+        	imprimir(" Felicidades !!, usted acertó en el intento " + intentos + ", el número correcto es : "+ numeropensadomáquina);
+        }    
+
+        else { 
+        	imprimir("Lo siento, usted erró los tres intentos, el número pensado por la computadora era : " + numeropensadomáquina);
+
+               }                                           
+
+        imprimir("FIN");
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
